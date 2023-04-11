@@ -14,8 +14,8 @@ if len(num) == 6:
     leftNum = int(num) // 1000
     rightNum = int(num) % 1000
 
-    leftSum = leftNum % 10 + leftNum // 10 % 10 + leftNum // 100 % 10
-    rightSum = rightNum % 10 + rightNum // 10 % 10 + rightNum // 100 % 10
+    leftSum = leftNum % 10 + leftNum // 10 % 10 + leftNum // 100
+    rightSum = rightNum % 10 + rightNum // 10 % 10 + rightNum // 100
 
     if leftSum % rightSum == 0:
         print("Поздравляю, вы счастливик!")
