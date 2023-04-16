@@ -13,15 +13,13 @@ X = int(input('Какое число вы хотите обнаружить в �
 A = [random.randint(strt, fin) for i in range(size)]
 print(f'\nРандомный массив:\n{A}')
 
-if A[0] <= X: min_diff = X - A[0]
-else: min_diff = A[0] - X
+min_diff = abs(A[0] - X) # заменено
 
 near = 0
 
-for i in range(0, len(A)):
-    
-    if A[i] <= X: diff = X - A[i]
-    else: diff = A[i] - X
+for i in range(len(A)):
+
+    diff = abs(X - A[i]) # заменено
 
     if diff < min_diff:
         min_diff = diff

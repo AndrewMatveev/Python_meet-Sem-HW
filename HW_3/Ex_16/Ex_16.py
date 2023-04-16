@@ -17,7 +17,7 @@ print(f'\nРандомный массив:\n{A}')
 
 cnt = 0
 
-for i in A:
+for i in range(len(A)):
     if X == A[i]:
         cnt += 1
 print(f'\nЧисло {X} встречается {cnt} раз')
