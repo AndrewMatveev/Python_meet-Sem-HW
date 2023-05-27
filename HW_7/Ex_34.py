@@ -10,7 +10,7 @@
 
 def rythm_check(request):
 
-    request_list = list(map(str, request.split(' ')))
+    request_list = request.split()
 
     cnt1 = 0
     cnt2 = list()
