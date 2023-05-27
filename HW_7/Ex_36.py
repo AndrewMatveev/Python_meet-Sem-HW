@@ -14,15 +14,15 @@ print_operation_table(lambda x, y: x * y)           1 2 3 4 5 6
 # ___________________РЕШЕНИЕ________________________
 
 def int_input_w_err(text):
-    while True:
-        try:
-           print(text, end='')
-           val = int(input())
-           return val
-        except ValueError:
-            print("Некорректрый ввод. Повторите ввод\n")
+    while True: # убрана обработка исключений
+        val = input(text)
+        if val.isdigit():
+            return int(val)
+        elif val == '':
+            return 6
+        print("Некорректный ввод. Повторите ввод\n")
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
+def print_operation_table(operation, num_rows, num_columns):
     
     for row in range(1, num_rows + 1):
         for col in range(1, num_columns + 1):

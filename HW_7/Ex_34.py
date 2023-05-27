@@ -8,16 +8,16 @@
 # ___________________РЕШЕНИЕ________________________
 
 
-def rythm_check(request):
+def rythm_check(request, vowel_letters_rus): # vowel_letters_rus добавлено как параметр
 
-    request_list = request.split()
+    request_list = request.split() # изменено
 
     cnt1 = 0
     cnt2 = list()
 
     for phrase in request_list:
         for letter in phrase:
-            for symbol in vowel_letters_ru:
+            for symbol in vowel_letters_rus:
                 if letter == symbol:
                     cnt1 += 1
         cnt2.append(cnt1)
@@ -35,4 +35,4 @@ vowel_letters_ru = {'а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'}
 
 text = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
 
-print(rythm_check(text))
+print(rythm_check(text, vowel_letters_ru))
